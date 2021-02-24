@@ -13,10 +13,10 @@ import java.io.File;
 public class Test {
 
     public static void main(String[] args) {
-//        CLibrary library = CLibrary.INSTANCE;
-//        library.hello();
+        CLibrary library = CLibrary.INSTANCE;
+        library.hello();
 
-        System.loadLibrary("libhello.so");
-        Native.loadLibrary(CLibrary.class.getResource("/libhello.so").getPath(), CLibrary.class);
+//        System.loadLibrary("libhello.so");
+//        Native.loadLibrary(CLibrary.class.getResource("/libhello.so").getPath(), CLibrary.class);
     }
 }
