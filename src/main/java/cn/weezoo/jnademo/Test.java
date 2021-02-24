@@ -1,6 +1,5 @@
 package cn.weezoo.jnademo;
 
-import cn.weezoo.jnademo.lib.CLibrary;
 import com.sun.jna.Library;
 import com.sun.jna.Native;
 
@@ -12,7 +11,17 @@ import java.io.File;
  */
 public class Test {
 
+    interface CLibrary extends Library {
+
+        CLibrary INSTANCE = (CLibrary) Native.synchronizedLibrary(
+                (CLibrary) Native.loadLibrary(CLibrary.class.getResource("/libhello.so").getPath(), CLibrary.class)
+        );
+
+        void hello();
+    }
+
     public static void main(String[] args) {
+
         CLibrary library = CLibrary.INSTANCE;
         library.hello();
 
