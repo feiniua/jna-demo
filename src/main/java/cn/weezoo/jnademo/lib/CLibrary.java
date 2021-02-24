@@ -10,7 +10,7 @@ import com.sun.jna.Native;
 public interface CLibrary extends Library {
 
     CLibrary INSTANCE = (CLibrary) Native.synchronizedLibrary(
-            (CLibrary) Native.loadLibrary(CLibrary.class.getResource("/libhello.so").getPath(), CLibrary.class)
+            (CLibrary) Native.loadLibrary(CLibrary.class.getResource("libhello.so").getPath(), CLibrary.class)
     );
 
     void hello();
