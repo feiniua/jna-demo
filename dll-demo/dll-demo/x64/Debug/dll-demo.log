@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  jniDll.cpp
+  dll-demo.cpp
+  正在生成代码...
+  dllmain.cpp
+     正在创建库 E:\vs_projects\dll-demo\x64\Debug\dll-demo.lib 和对象 E:\vs_projects\dll-demo\x64\Debug\dll-demo.exp
+  dll-demo.vcxproj -> E:\vs_projects\dll-demo\x64\Debug\dll-demo.dll
